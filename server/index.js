@@ -5,11 +5,14 @@ import express from 'express';
 //Nuestras Rutas
 import productRoutes from './routes/productRoutes.js';
 
+//var path = require('path')
+
 dotenv.config();
 connectToDatabase();
 const app = express();
 
 app.use(express.json());
+//app.use(express.static(path.join(__dirname, 'public')));
 
 const port = process.env.PORT || 5000
 
