@@ -66,7 +66,7 @@ const ProductCard = ({product}) => {
             </Box>
             <Flex mt='1' justifyContent='space-between' alignContent='center'>
                 <Link as={ReactLink} to={`/product/${product._id}`} pt='2' cursor='pointer'>
-                    <Box fontSize='2x1' fontWeight='semibold' lineHeight='tight'>
+                    <Box fontSize='2xl' fontWeight='semibold' lineHeight='tight'>
                         {product.name}
                     </Box>
                 </Link>
@@ -75,7 +75,7 @@ const ProductCard = ({product}) => {
                 <Rating rating={product.rating} numberOfReviews={product.numberOfReviews}/>
             </Flex>
             <Flex justify='space-between'>
-                <Box fontSize='2x1' color={useColorModeValue('gray.800', 'white')}>
+                <Box fontSize='2xl' color={useColorModeValue('gray.800', 'white')}>
                     <Box as='span' color={'gray.600'} fontSize='lg'>
                         $
                     </Box>

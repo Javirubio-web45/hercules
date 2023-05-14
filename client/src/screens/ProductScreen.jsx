@@ -63,7 +63,7 @@ const ProductScreen = () => {
                                     Vendido
                                 </Badge>
                             )}
-                            <Heading fontSize='2x1' fontWeight='extrabold'>
+                            <Heading fontSize='2xl' fontWeight='extrabold'>
                                 {product.name}
                             </Heading>
                             <Stack spacing='5'>

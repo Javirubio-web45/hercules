@@ -2,6 +2,7 @@ import { Box, Flex, HStack, Link, IconButton, Icon, Text, useDisclosure, Button,
 import {Link as ReactLink} from 'react-router-dom';
 import {HamburgerIcon, CloseIcon, MoonIcon, SunIcon} from '@chakra-ui/icons';
 import {GiScrew} from  'react-icons/gi'
+import { useState } from 'react';
 
 const links = [
     {linkname: 'Productos', path: '/products'}, 
@@ -15,14 +16,15 @@ const NavLink = ({path, children}) => (
 const Navbar = () => {
     const {isOpen, onClose, onOpen} = useDisclosure();
     const {colorMode, toggleColorMode} = useColorMode();
+    const [isHovering, setIsHovering] = useState(false)
     return (
         <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
             <Flex h={16} alignItems='center' justifyContent='space-between'>
                 <IconButton size='md' icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} display={{ md: 'none' }} onClick={isOpen ? onClose: onOpen}/>
                 <HStack>
-                    <Link as={ReactLink} to='/'>
+                    <Link as={ReactLink} to='/' style={{TextDecoration: 'none'}} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
                         <Flex alignItems='center'>
-                            <Icon as={GiScrew} h={6} w={6} color='blue.400'/>
+                            <Icon as={GiScrew} h={6} w={6} color={isHovering ? 'cyan.400' : 'blue.400'}/>
                             <Text fontWeight='extrabold'>Birlos Hercules</Text>
                         </Flex>
                     </Link>
