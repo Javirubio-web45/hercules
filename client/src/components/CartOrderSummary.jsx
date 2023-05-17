@@ -18,7 +18,7 @@ const CartOrderSummary = () => {
 
     return (
         <Stack spacing='8' borderWidth='1px' rounded='lg' padding='8' w='full'>
-            <Heading size='md'>OrderSummary</Heading>
+            <Heading size='md'>Resumen de Orden</Heading>
             <Stack spacing='6'>
                 <Flex justify='space-between'>
                     <Text fontWeight='medium' color={mode('gray.600', 'gray.400')}>
@@ -30,7 +30,7 @@ const CartOrderSummary = () => {
                 </Flex>
                 <Flex justify='space-between'>
                     <Text fontWeight='medium' color={mode('gray.600', 'gray.400')}>
-                        Shipping
+                        Envio
                     </Text>
                     <Text fontWeight='medium'>
                         ${subtotal <= 1000 ? (
@@ -52,7 +52,7 @@ const CartOrderSummary = () => {
                     
                 </Flex>
             </Stack>
-            <Button as={ReactLink} to='/checkout' colorScheme='blue' size='lg' fontSize='md' rightIcon={<FaArrowRight/>} isLoading={buttonLoading} onClick={() => checkoutHandler()}>Checkout</Button>
+            <Button as={ReactLink} to='/checkout' colorScheme='blue' size='lg' fontSize='md' rightIcon={<FaArrowRight/>} isLoading={buttonLoading} onClick={() => checkoutHandler()}>Pagar</Button>
         </Stack>
     )
 }

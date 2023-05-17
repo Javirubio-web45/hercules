@@ -4,7 +4,7 @@ export const initialState = {
     loading: false,
     error: null,
     userInfo: JSON.parse(localStorage.getItem('userInfo')) ?? null,
-    // updateSuccess: false,
+    updateSuccess: false,
     // orders: [],
 };
 
@@ -29,7 +29,20 @@ export const userSlice = createSlice({
             state.error = payload;
             state.loading = false;
         },
-
+        updateUserProfile: (state, { payload }) => {
+            state.userInfo = payload;
+            state.updateSuccess = true;
+            state.loading = false;
+            state.error = null;
+        },
+        resetUpdate: (state) => {
+            state.updateSuccess = false;
+        },
+        // setUserOrders: (state, { payload }) => {
+        //     state.error = null;
+        //     state.orders = payload;
+        //     state.loading = false;
+        // },
     },
 });
 
