@@ -41,11 +41,11 @@ import {
           <Stack direction="row" spacing="8">
             <Stack spacing="4" minW="36" flex="1">
               <Text fontSize="sm" fontWeight="semibold" color="subtle">
-                Product
+                Producto
               </Text>
               <Stack spacing="3" shouldWrapChildren>
-                <Button variant="link">How it works</Button>
-                <Button variant="link">Pricing</Button>
+                <Button variant="link">Como funciona</Button>
+                <Button variant="link">Precios</Button>
               </Stack>
             </Stack>
             <Stack spacing="4" minW="36" flex="1">
@@ -53,20 +53,20 @@ import {
                 Legal
               </Text>
               <Stack spacing="3" shouldWrapChildren>
-                <Button variant="link">Privacy</Button>
-                <Button variant="link">Terms</Button>
-                <Button variant="link">License</Button>
+                <Button variant="link">Privacidad</Button>
+                <Button variant="link">Terminos</Button>
+                <Button variant="link">Licencia</Button>
               </Stack>
             </Stack>
           </Stack>
           <Stack spacing="4">
             <Text fontSize="sm" fontWeight="semibold" color="subtle">
-              Stay up to date
+              Mantente actualizado
             </Text>
             <Stack spacing="4" direction={{ base: 'column', sm: 'row' }} maxW={{ lg: '360px' }}>
               <Input placeholder="Enter your email" type="email" required />
               <Button variant="primary" type="submit" flexShrink={0}>
-                Subscribe
+                Subscribete
               </Button>
             </Stack>
           </Stack>
